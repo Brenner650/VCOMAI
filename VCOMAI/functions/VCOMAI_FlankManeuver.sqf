@@ -62,6 +62,9 @@ if (_VCOM_Flanking) exitWith {};
 
 if ((count (waypoints (group _Unit))) >= 3) exitWith {};
 
+//Check if nearest enemy is within an aircraft.
+if (vehicle _myNearestEnemy isKindOf "Air") exitWith {};
+
 if (_Unit getVariable "VCOM_GARRISONED") exitWith {};
 
 		//systemchat format ["%1 RAWR B",side _unit];
